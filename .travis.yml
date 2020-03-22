@@ -21,8 +21,6 @@ matrix:
   include:
     - php: 7.2
       env: WP_VERSION=latest
-    - php: 7.2
-      env: WP_TRAVISCI=phpcs
     - php: 7.1
       env: WP_VERSION=trunk
     # This build results in an error, not sure how to address yet.
@@ -44,11 +42,6 @@ before_script:
       composer install
     fi
   - |
-    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      #composer global require wp-coding-standards/wpcs
-      #phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
-    fi
-  - |
     if [[ ! -z "$WP_VERSION" ]] ; then
       cd ../
       git clone https://github.com/alleyinteractive/safe-redirect-manager.git
@@ -61,8 +54,4 @@ script:
     if [[ ! -z "$WP_VERSION" ]] ; then
       phpunit
       WP_MULTISITE=1 phpunit
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      #phpcs
     fi
