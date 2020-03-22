@@ -1,9 +1,9 @@
 {
-  "name": "alleyinteractive/wp-irving",
+  "name": "fortunemedia/wp-irving",
   "authors": [
     {
-      "name": "Alley Interactive",
-      "email": "noreply@alleyinteractive.com"
+      "name": "Fortune Media",
+      "email": "benny.wong@fortune.com"
     }
   ],
   "require-dev": {
