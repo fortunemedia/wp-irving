@@ -1,6 +1,6 @@
 <?php
 /**
- * Class file for Components endpoint. 
+ * Class file for Components endpoint.
  *
  * @package WP_Irving
  */
@@ -425,7 +425,7 @@ class Components_Endpoint extends Endpoint {
 	 * @param string $context The context of the request, either `page` or `site`.
 	 * @return string
 	 */
-	/*public static function get_wp_irving_api_url( $url, $context = 'page' ) {
+	public static function get_wp_irving_api_url( $url, $context = 'page' ) {
 
 		// Get the path.
 		$path = str_replace( get_home_url(), '', $url );
@@ -442,7 +442,7 @@ class Components_Endpoint extends Endpoint {
 			],
 			rest_url( 'irving/v1/components' )
 		);
-	}*/
+	}
 
 	/**
 	 * Add API endpoint link to post row actions.
